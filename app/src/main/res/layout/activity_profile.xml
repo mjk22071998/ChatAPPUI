@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:weightSum="2"
+    android:orientation="vertical"
+    tools:context=".activities.ProfileActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textSize="30sp"
+            android:layout_toStartOf="@id/edit"
+            android:textColor="@color/white"/>
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/edit"
+            android:layout_alignTop="@id/title"
+            android:layout_alignBottom="@id/title"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/profile_back">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/avatar"
+                android:layout_marginStart="15dp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/avatar"
+                android:text="Kugisaki Nobara"
+                android:textSize="25sp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/name"
+                android:layout_alignTop="@id/name"
+                android:layout_alignBottom="@id/name"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/verified" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available"
+                android:textColor="@color/white"
+                android:layout_below="@id/name"
+                android:layout_toEndOf="@id/avatar"
+                android:layout_marginStart="10dp"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/about_me_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/avatar"
+                android:layout_margin="15dp"
+                android:text="About Me"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/about_me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/about_me_title"
+                android:text="@string/aboutme"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="15dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+            <LinearLayout
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/about_me"
+                android:layout_margin="15dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Phone Number"
+                    android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0123456789"
+                    android:textColor="#FF95C9"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_rectangle"
+                android:layout_below="@id/phone"
+                android:padding="15dp">
+                <TextView
+                    android:id="@+id/complete_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Complete Profile"
+                    android:textColor="@color/white"
+                    android:textSize="17.5sp" />
+                <TextView
+                    android:id="@+id/complete_profile_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Complete your personal information"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/complete_profile"
+                    android:textSize="10sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/next"
+                    android:layout_alignTop="@id/complete_profile"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignBottom="@id/complete_profile_text"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

@@ -55,14 +55,15 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.Messag
         TextView name,initial,hour,message;
         public MessagesViewHolder(@NonNull View itemView) {
             super(itemView);
+            name=itemView.findViewById(R.id.name);
+            initial=itemView.findViewById(R.id.initial);
+            hour=itemView.findViewById(R.id.time);
+            message=itemView.findViewById(R.id.message);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     onItemClicked.onClick(getAdapterPosition());
-                    name=itemView.findViewById(R.id.name);
-                    initial=itemView.findViewById(R.id.initial);
-                    hour=itemView.findViewById(R.id.time);
-                    message=itemView.findViewById(R.id.message);
+
                 }
             });
         }

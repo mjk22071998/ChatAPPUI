@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.85"
         android:padding="10dp">
         <TextView
             android:id="@+id/title"
@@ -33,7 +33,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.15"
         android:background="@drawable/profile_back">
 
         <RelativeLayout
@@ -139,6 +139,7 @@
                     android:layout_below="@id/complete_profile"
                     android:textSize="10sp" />
                 <ImageView
+                    android:id="@+id/next"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/next"

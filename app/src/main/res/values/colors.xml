@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primary">#101223</color>
     <color name="onPrimary">#3aa0ff</color>
+    <color name="primaryLight">#232539</color>
 </resources>
